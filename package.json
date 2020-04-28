@@ -10,7 +10,7 @@
     "start": "NODE_ENV=development BABEL_ENV=development node --max_old_space_size=4096 node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.demo.js --env=dev --mode development --host 127.0.0.1 --port 3000 --progress --inline --open",
     "build": "webpack --config webpack.config.js --mode production",
     "prepare": "echo 'Building useTyping' && npm run build",
-    "lint": "eslint src --ext .js,.jsx --fix"
+    "lint": "eslint src --ext .js,.jsx --fix && eslint demo --ext .js,.jsx --fix"
   },
   "repository": {
     "type": "git",
