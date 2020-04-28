@@ -13,6 +13,7 @@ const WORDS = [
   'Cool cool cool.',
   'Six seasons and a movie!'
 ]
+
 export default () => {
   const text = useTyping({ words: WORDS })
   return (
