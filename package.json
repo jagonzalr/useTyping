@@ -86,8 +86,5 @@
     "hooks": {
       "pre-commit": "lint-staged && pretty-quick --staged"
     }
-  },
-  "dependencies": {
-    "use-timeout": "^1.1.0"
   }
 }
