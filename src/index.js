@@ -6,7 +6,7 @@ export const useTyping = ({
   phrases = [],
   loop = true,
   speed = 100,
-  speedAfterWord = 2000
+  pause = 2000
 }) => {
   const charIndexRef = useRef(-1)
   const phraseIndexRef = useRef(0)
@@ -29,7 +29,7 @@ export const useTyping = ({
   const keystroke = async () => {
     let nextDelay = speed
     if (charIndexRef.current === phrases[phraseIndexRef.current].length - 1) {
-      nextDelay = speedAfterWord
+      nextDelay = pause
       charIndexRef.current = -1
       if (phraseIndexRef.current === phrases.length - 1) {
         if (!loop) return
