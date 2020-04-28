@@ -1,6 +1,6 @@
 {
   "name": "use-typing",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simulate typing with React hooks.",
   "main": "lib/index.js",
   "files": [
@@ -86,5 +86,8 @@
     "hooks": {
       "pre-commit": "lint-staged && pretty-quick --staged"
     }
+  },
+  "dependencies": {
+    "style-loader": "^1.2.1"
   }
 }
