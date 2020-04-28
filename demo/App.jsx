@@ -7,7 +7,7 @@ import { useTyping } from '../src/index'
 import './styles/tailwind.css'
 import './styles/index.scss'
 
-const WORDS = [
+const PHRASES = [
   'I regret nothing.',
   'Never listen to Pierce.',
   'Cool cool cool.',
@@ -15,7 +15,7 @@ const WORDS = [
 ]
 
 export default () => {
-  const text = useTyping({ words: WORDS })
+  const text = useTyping({ phrases: PHRASES })
   return (
     <div className='flex h-screen'>
       <div className='m-auto'>
