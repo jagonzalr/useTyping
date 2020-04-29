@@ -1,5 +1,5 @@
 {
-  "name": "useTyping",
+  "name": "use-typing",
   "version": "1.0.3",
   "description": "Simulate typing with React hooks.",
   "main": "lib/index.js",
