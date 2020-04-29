@@ -1,6 +1,6 @@
 {
-  "name": "use-typing",
-  "version": "1.0.2",
+  "name": "useTyping",
+  "version": "1.0.3",
   "description": "Simulate typing with React hooks.",
   "main": "lib/index.js",
   "files": [
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jagonzalr/use-typing.git"
+    "url": "git+https://github.com/jagonzalr/useTyping.git"
   },
   "keywords": [
     "Typing",
@@ -24,9 +24,9 @@
   "author": "Jose Antonio Gonzalez Rodriguez",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jagonzalr/use-typing/issues"
+    "url": "https://github.com/jagonzalr/useTyping/issues"
   },
-  "homepage": "https://github.com/jagonzalr/use-typing#readme",
+  "homepage": "https://github.com/jagonzalr/useTyping#readme",
   "peerDependencies": {
     "react": "^16.8.x"
   },

@@ -1,6 +1,6 @@
 [![npm version](https://badge.fury.io/js/use-typing.svg)](https://badge.fury.io/js/use-typing)
 
-# use-typing
+# useTyping
 
 Simulate typing with React hooks.
 
