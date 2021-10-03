@@ -40,13 +40,13 @@ module.exports = {
       }
     ]
   },
-  node: {
-    fs: 'empty',
-    net: 'empty'
-  },
   resolve: {
     mainFields: ['browser', 'main', 'module'],
     extensions: ['.js', '.mjs', '.json', '.jsx'],
-    symlinks: false
+    symlinks: false,
+    fallback: {
+      fs: 'empty',
+      net: 'empty'
+    }
   }
 }
