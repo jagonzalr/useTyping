@@ -1,7 +1,3 @@
-'use strict'
-
-import React from 'react'
-
 import { useTyping } from '../src/index'
 
 import './styles/tailwind.css'

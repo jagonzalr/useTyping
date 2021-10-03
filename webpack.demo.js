@@ -1,7 +1,6 @@
 'use strict'
 
 const path = require('path')
-const webpack = require('webpack')
 const eslintFormatter = require('react-dev-utils/eslintFormatter')
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -9,7 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const srcPath = path.join(__dirname, './demo')
 
 let config = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'cheap-module-source-map',
   target: 'web',
   mode: 'development',
   stats: {
@@ -23,13 +22,7 @@ let config = {
     children: false
   },
   entry: {
-    build: [
-      'core-js/stable',
-      'regenerator-runtime/runtime',
-      'webpack-dev-server/client?http://localhost:3000',
-      'webpack/hot/only-dev-server',
-      './demo/index'
-    ]
+    build: ['./demo/index']
   },
   output: {
     pathinfo: true,
@@ -39,17 +32,12 @@ let config = {
   },
   devServer: {
     port: 3000,
-    host: 'localhost',
+    host: '127.0.0.1',
     historyApiFallback: true,
-    noInfo: false,
-    stats: { colors: true, progress: true },
-    contentBase: path.join(__dirname, '../demo'),
-    quiet: false,
+    // noInfo: false,
+    // stats: { colors: true, progress: true },
+    // contentBase: path.join(__dirname, '../src'),
     hot: true
-    /* watchOptions: {
-      aggregateTimeout: 300,
-      poll: true
-    } */
   },
   module: {
     rules: [
@@ -71,8 +59,8 @@ let config = {
         test: /\.(js|jsx)$/,
         loader: require.resolve('babel-loader'),
         options: {
-          cacheDirectory: true,
-          plugins: ['react-hot-loader/babel']
+          cacheCompression: false,
+          cacheDirectory: true
         },
         exclude: /node_modules/
       },
@@ -94,21 +82,20 @@ let config = {
       }
     ]
   },
-  node: {
-    fs: 'empty',
-    net: 'empty'
-  },
   resolve: {
     mainFields: ['browser', 'main', 'module'],
     extensions: ['.js', '.mjs', '.json', '.jsx'],
-    symlinks: false
+    symlinks: false,
+    fallback: {
+      fs: 'empty',
+      net: 'empty'
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './demo/index.html',
       inject: true
     }),
-    new webpack.NamedModulesPlugin(),
     new CaseSensitivePathsPlugin()
   ]
 }
